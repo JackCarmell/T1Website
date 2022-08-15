@@ -141,7 +141,7 @@
           <a href="{{ route('contact') }}" class="align-middle text-white">CONTACT</a>
         </li>
         <li class="flex justify-center align-center">
-          <a href="{{ route('basket') }}" class="align-middle text-white">BASKET</a>
+          <a href="{{ route('cart.list') }}" class="align-middle text-white">BASKET</a>
         </li>
         <li class="flex justify-center align-center bg-green-400 rounded px-2 transition-colors duration-300
         font-semibold">

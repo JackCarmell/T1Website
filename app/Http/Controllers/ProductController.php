@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
+// use bumbummen99\shoppingcart\src\Cart;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class ProductController extends Controller
 {
@@ -26,36 +28,10 @@ class ProductController extends Controller
     public function viewProduct($id)
     {
         $product = Product::findOrFail($id);
-        
+
         return view('product', [
             'product' => $product
         ]);
-    }
-
-    public function basket()
-    {
-        return view('basket');
-    }
-
-    public function addToBasket($id)
-    {
-        $product = Product::findOrFail($id);
-        ddd($product);
-        $basket = session()->get('basket', []);
-
-        if (isset($basket[$id]))
-        {
-            $basket[$id]['quantity']++;
-        } else {
-            $basket[$id] = [
-                "name" => $product->name,
-                "quantity" => "1",
-                "price" => $product->price,
-                "image" => $product->image,
-            ];
-        }
-        session()->put('basket', $basket);
-        return redirect()->back()->with('success', "Item was added to your basket!");
     }
 
     /**

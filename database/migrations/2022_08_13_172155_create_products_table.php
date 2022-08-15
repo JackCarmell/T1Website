@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('details');
             $table->text('description');
             $table->string('product_code');
-            $table->string('image')->default('stockImages/logo.jpg');
+            $table->string('image')->default('stockImages/no_image.jpg');
             $table->unsignedBigInteger('price');
             $table->unsignedBigInteger('quantity');
             $table->timestamps();

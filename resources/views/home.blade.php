@@ -3,6 +3,5 @@
 @section('content')
 
 <x-carousel />
-<x-offers />
 
 @endsection

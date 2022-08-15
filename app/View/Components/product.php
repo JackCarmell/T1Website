@@ -12,18 +12,20 @@ class product extends Component
     public $price;
     public $image;
     public $id;
+    public $hasLink;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($name, $text, $price, $image, $id)
+    public function __construct($name, $text, $price, $image, $id, $hasLink)
     {
         $this->name = $name;
         $this->text = $text;
         $this->price = $price;
         $this->image = $image;
         $this->id = $id;
+        $this->hasLink = $hasLink;
     }
 
     /**

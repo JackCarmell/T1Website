@@ -27,7 +27,7 @@
         
         <x-navbar />
         
-        <main class="py-24 container-fluid">
+        <main class="py-24 container-fluid h-min-full">
             @yield('content')
         </main>
     </div>
